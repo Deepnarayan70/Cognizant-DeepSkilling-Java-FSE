@@ -3,21 +3,16 @@ import java.util.ArrayList;
 public class Inventory {
 
     ArrayList<Product> products = new ArrayList<>();
-
-    // Add Product
     public void addProduct(Product product) {
         products.add(product);
         System.out.println("Product Added Successfully.");
     }
-
-    // Display Products
     public void displayProducts() {
         for (Product p : products) {
             System.out.println(p);
         }
     }
 
-    // Update Product
     public void updateProduct(int id, int quantity) {
         for (Product p : products) {
             if (p.productId == id) {
@@ -29,7 +24,6 @@ public class Inventory {
         System.out.println("Product Not Found.");
     }
 
-    // Delete Product
     public void deleteProduct(int id) {
         for (Product p : products) {
             if (p.productId == id) {
