@@ -1,0 +1,8 @@
+com\cognizant\ormlearn\repository\DepartmentRepository.class
+com\cognizant\ormlearn\repository\EmployeeRepository.class
+com\cognizant\ormlearn\OrmLearnApplication.class
+com\cognizant\ormlearn\controller\EmployeeController.class
+com\cognizant\ormlearn\model\Employee.class
+com\cognizant\ormlearn\model\Department.class
+com\cognizant\ormlearn\controller\DepartmentController.class
+com\cognizant\ormlearn\dto\EmployeeDTO.class
