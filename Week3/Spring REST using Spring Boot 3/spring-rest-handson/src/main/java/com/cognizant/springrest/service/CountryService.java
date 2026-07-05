@@ -1,17 +1,43 @@
 package com.cognizant.springrest.service;
 
 import com.cognizant.springrest.model.Country;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CountryService {
 
-    @Autowired
-    private ApplicationContext context;
+    private static List<Country> countryList = new ArrayList<>();
 
-    public Country getCountry() {
-        return context.getBean("country", Country.class);
+    static {
+
+        Country india = new Country();
+        india.setCode("IN");
+        india.setName("India");
+
+        Country us = new Country();
+        us.setCode("US");
+        us.setName("United States");
+
+        Country japan = new Country();
+        japan.setCode("JP");
+        japan.setName("Japan");
+
+        countryList.add(india);
+        countryList.add(us);
+        countryList.add(japan);
+    }
+
+    public Country getCountry(String code) {
+
+        for (Country country : countryList) {
+            if (country.getCode().equalsIgnoreCase(code)) {
+                return country;
+            }
+        }
+
+        return null;
     }
 }
