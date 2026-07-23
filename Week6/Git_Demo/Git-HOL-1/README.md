@@ -15,7 +15,7 @@ Pushed the local repository to GitHub
 Commands Used
 git --version
 git config --global user.name "Jeet Lohar"
-git config --global user.email "jeetloharcrj@gmail.com"
+git config --global user.email "deepnaryan03@gmail.com"
 git config --global core.editor "code --wait"
 git init
 echo "Welcome to the version control" > welcome.txt
@@ -23,7 +23,7 @@ git status
 git add welcome.txt
 git commit -m "Initial Commit"
 git log
-git remote add origin https://github.com/Jeet-Lohar-29/GitDemo.git
+git remote add origin https://github.com/Deepnarayan70/GitDemo.git
 git branch -M main
 git push -u origin main
 Result
