@@ -1,84 +1,94 @@
-# Git Hands-on 3
-## Objective
-Learn Git branching and merging by creating a new branch, making changes, comparing branches, merging the branch into the main branch, and deleting the merged branch.
+# Git Hands-on 2
 
-Steps Completed
-Created a new local Git repository.
-Created the initial file welcome.txt.
-Committed the initial version to the main branch.
-Created a new branch named GitNewBranch.
-Switched to the new branch.
-Modified welcome.txt.
-Committed the changes in GitNewBranch.
-Verified the repository status.
-Switched back to the main branch.
-Compared the differences between main and GitNewBranch.
-Merged GitNewBranch into main.
-Displayed the commit history using Git graph.
-Deleted the merged branch.
-Connected the local repository to GitHub.
-Pushed the repository successfully.
-Commands Used
+## Objective
+
+Learn how to use `.gitignore` to exclude unnecessary files and folders from being tracked by Git.
+
+---
+
+## Steps Completed
+
+- Initialized a local Git repository.
+- Created sample log files (`app.log` and `error.log`).
+- Created a `log` directory containing `server.log`.
+- Created a sample file `welcome.txt`.
+- Added a `.gitignore` file.
+- Configured Git to ignore all `.log` files and the `log` directory.
+- Verified that ignored files were not tracked by Git.
+- Added the required project files to the staging area.
+- Committed the changes.
+- Connected the repository to GitHub.
+- Successfully pushed the repository to the remote repository.
+
+---
+
+## Commands Used
+
+```bash
 git init
 
 git status
 
-echo "This is the Master Branch" > welcome.txt
+mkdir log
+
+echo "Application Log" > app.log
+
+echo "Error Log" > error.log
+
+echo "Log Folder File" > log/server.log
+
+echo "Hello Git" > welcome.txt
+
+git status
 
 git add .
-git commit -m "Initial Commit"
+
+git commit -m "Added .gitignore to ignore log files"
+
+git remote add origin https://github.com/Deepnarayan70/GitIgnoreDemo.git
 
 git branch -M main
 
-git branch GitNewBranch
-
-git branch
-
-git checkout GitNewBranch
-
-Add-Content welcome.txt "This line was added in GitNewBranch"
-
-git status
-git add .
-git commit -m "Added content in GitNewBranch"
-
-git checkout main
-
-git diff main GitNewBranch
-
-git merge GitNewBranch
-
-git log --oneline --graph --decorate
-
-git branch -d GitNewBranch
-
-git status
-
-git remote add origin https://github.com/Jeet-Lohar-29/GitBranchDemo.git
-
-git remote -v
-
 git push -u origin main
-Files Created
-GitBranchDemo/
+```
+
+---
+
+## Project Structure
+
+```
+GitIgnoreDemo/
 │
+├── .gitignore
 ├── welcome.txt
-└── .git/
-Branch Structure
-main
-   │
-   └── GitNewBranch
-            │
-            └── Added new content
-                   │
-                   ▼
-              Merged into main
-Result
-Successfully created a new branch.
-Successfully switched between branches.
-Successfully committed changes in the feature branch.
-Successfully compared branch differences.
-Successfully merged the feature branch into the main branch.
-Successfully viewed the commit graph.
-Successfully deleted the merged branch.
-Successfully pushed the repository to GitHub.
+├── app.log
+├── error.log
+└── log/
+    └── server.log
+```
+
+---
+
+## .gitignore
+
+```gitignore
+*.log
+log/
+```
+
+---
+
+## Result
+
+- Successfully configured `.gitignore` to exclude unnecessary files.
+- Verified that all `.log` files and the `log` directory were ignored.
+- Committed only the required project files.
+- Successfully pushed the repository to GitHub.
+
+---
+
+## Author
+
+**Deep Narayan**
+
+GitHub: https://github.com/Deepnarayan70
